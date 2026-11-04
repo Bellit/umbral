@@ -1,0 +1,6 @@
+node_modules
+dist
+*.local
+# inmuebles y fotos personales: solo en este ordenador
+src/privado/
+public/privado/

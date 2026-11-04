@@ -1,0 +1,1160 @@
+{
+ "schema": "umbral.model/1",
+ "meta": {
+  "title": "Casa con patio",
+  "createdAt": "2026-11-04T18:00:00+01:00",
+  "units": "m",
+  "source": "manual (plano de prueba 2)",
+  "example": true,
+  "notes": "Transcrito del plano de prueba 2 con sus cotas exteriores. Superficies calculadas de eje a eje de pared. Muebles aproximados. No incluye la jardinera ni el porche de entrada."
+ },
+ "agency": {
+  "name": "Inmobiliaria Horizonte",
+  "logoText": "IH",
+  "color": "#1f5f8b",
+  "phone": "+34 600 000 000",
+  "email": "info@example.com",
+  "web": "example.com",
+  "address": "Calle de Ejemplo, 1",
+  "agent": "Laura Ejemplo",
+  "example": true
+ },
+ "property": {
+  "title": "Casa de 3 habitaciones con patio",
+  "address": "Dirección de ejemplo",
+  "price": "Precio de ejemplo",
+  "description": "Vivienda de una planta con sala-comedor amplia, tres habitaciones, dos baños y patio interior junto a la cocina. Datos de demostración, a partir de un plano de muestra.",
+  "features": [
+   {
+    "label": "Dormitorios",
+    "value": "3"
+   },
+   {
+    "label": "Baños",
+    "value": "2"
+   },
+   {
+    "label": "Exterior",
+    "value": "Patio"
+   },
+   {
+    "label": "Plantas",
+    "value": "1"
+   }
+  ]
+ },
+ "floors": [
+  {
+   "id": "p1",
+   "name": "Planta única",
+   "level": 0,
+   "height": 2.5,
+   "rooms": [
+    {
+     "id": "sal",
+     "name": "Sala-comedor",
+     "polygon": [
+      [
+       2.7,
+       0
+      ],
+      [
+       9,
+       0
+      ],
+      [
+       9,
+       5.9
+      ],
+      [
+       3.9,
+       5.9
+      ],
+      [
+       3.9,
+       2.2
+      ],
+      [
+       2.7,
+       2.2
+      ]
+     ],
+     "finish": "tile",
+     "label": [
+      6.2,
+      3.2
+     ],
+     "measured": false
+    },
+    {
+     "id": "coc",
+     "name": "Cocina",
+     "polygon": [
+      [
+       6.9,
+       5.9
+      ],
+      [
+       9,
+       5.9
+      ],
+      [
+       9,
+       10.1
+      ],
+      [
+       6.9,
+       10.1
+      ]
+     ],
+     "finish": "tile",
+     "measured": false
+    },
+    {
+     "id": "hal",
+     "name": "Hall",
+     "polygon": [
+      [
+       2.7,
+       4.65
+      ],
+      [
+       3.9,
+       4.65
+      ],
+      [
+       3.9,
+       8.15
+      ],
+      [
+       2.7,
+       8.15
+      ]
+     ],
+     "finish": "wood",
+     "measured": false
+    },
+    {
+     "id": "h1",
+     "name": "Habitación 1",
+     "polygon": [
+      [
+       0,
+       0.9
+      ],
+      [
+       2.7,
+       0.9
+      ],
+      [
+       2.7,
+       2.2
+      ],
+      [
+       3.9,
+       2.2
+      ],
+      [
+       3.9,
+       4.65
+      ],
+      [
+       0,
+       4.65
+      ]
+     ],
+     "finish": "wood",
+     "label": [
+      1.9,
+      3.2
+     ],
+     "measured": false
+    },
+    {
+     "id": "h2",
+     "name": "Habitación 2",
+     "polygon": [
+      [
+       3.9,
+       5.9
+      ],
+      [
+       6.9,
+       5.9
+      ],
+      [
+       6.9,
+       10.1
+      ],
+      [
+       3.9,
+       10.1
+      ]
+     ],
+     "finish": "wood",
+     "measured": false
+    },
+    {
+     "id": "h3",
+     "name": "Habitación 3",
+     "polygon": [
+      [
+       0,
+       8.15
+      ],
+      [
+       3.9,
+       8.15
+      ],
+      [
+       3.9,
+       12
+      ],
+      [
+       0,
+       12
+      ]
+     ],
+     "finish": "wood",
+     "measured": false
+    },
+    {
+     "id": "b1",
+     "name": "Baño 1",
+     "polygon": [
+      [
+       0,
+       4.65
+      ],
+      [
+       2.7,
+       4.65
+      ],
+      [
+       2.7,
+       6.45
+      ],
+      [
+       0,
+       6.45
+      ]
+     ],
+     "finish": "bath",
+     "measured": false
+    },
+    {
+     "id": "b2",
+     "name": "Baño 2",
+     "polygon": [
+      [
+       0,
+       6.45
+      ],
+      [
+       2.7,
+       6.45
+      ],
+      [
+       2.7,
+       8.15
+      ],
+      [
+       0,
+       8.15
+      ]
+     ],
+     "finish": "bath",
+     "measured": false
+    },
+    {
+     "id": "lav",
+     "name": "Lavadero",
+     "polygon": [
+      [
+       8.1,
+       10.1
+      ],
+      [
+       9,
+       10.1
+      ],
+      [
+       9,
+       12
+      ],
+      [
+       8.1,
+       12
+      ]
+     ],
+     "finish": "tile",
+     "measured": false
+    },
+    {
+     "id": "pat",
+     "name": "Patio",
+     "polygon": [
+      [
+       3.9,
+       10.1
+      ],
+      [
+       8.1,
+       10.1
+      ],
+      [
+       8.1,
+       12
+      ],
+      [
+       3.9,
+       12
+      ]
+     ],
+     "finish": "tile",
+     "outdoor": true,
+     "measured": false
+    }
+   ],
+   "walls": [
+    {
+     "id": "w1",
+     "a": [
+      0,
+      0.9
+     ],
+     "b": [
+      0,
+      12
+     ],
+     "thickness": 0.15
+    },
+    {
+     "id": "w2",
+     "a": [
+      0,
+      12
+     ],
+     "b": [
+      9,
+      12
+     ],
+     "thickness": 0.15
+    },
+    {
+     "id": "w3",
+     "a": [
+      9,
+      12
+     ],
+     "b": [
+      9,
+      0
+     ],
+     "thickness": 0.15
+    },
+    {
+     "id": "w4",
+     "a": [
+      9,
+      0
+     ],
+     "b": [
+      2.7,
+      0
+     ],
+     "thickness": 0.15
+    },
+    {
+     "id": "w5",
+     "a": [
+      2.7,
+      0
+     ],
+     "b": [
+      2.7,
+      2.2
+     ],
+     "thickness": 0.15
+    },
+    {
+     "id": "w6",
+     "a": [
+      0,
+      0.9
+     ],
+     "b": [
+      2.7,
+      0.9
+     ],
+     "thickness": 0.15
+    },
+    {
+     "id": "w7",
+     "a": [
+      2.7,
+      2.2
+     ],
+     "b": [
+      3.9,
+      2.2
+     ],
+     "thickness": 0.1
+    },
+    {
+     "id": "w8",
+     "a": [
+      3.9,
+      2.2
+     ],
+     "b": [
+      3.9,
+      12
+     ],
+     "thickness": 0.1
+    },
+    {
+     "id": "w9",
+     "a": [
+      0,
+      4.65
+     ],
+     "b": [
+      3.9,
+      4.65
+     ],
+     "thickness": 0.1
+    },
+    {
+     "id": "w10",
+     "a": [
+      0,
+      6.45
+     ],
+     "b": [
+      2.7,
+      6.45
+     ],
+     "thickness": 0.1
+    },
+    {
+     "id": "w11",
+     "a": [
+      0,
+      8.15
+     ],
+     "b": [
+      3.9,
+      8.15
+     ],
+     "thickness": 0.1
+    },
+    {
+     "id": "w12",
+     "a": [
+      2.7,
+      4.65
+     ],
+     "b": [
+      2.7,
+      8.15
+     ],
+     "thickness": 0.1
+    },
+    {
+     "id": "w13",
+     "a": [
+      3.9,
+      5.9
+     ],
+     "b": [
+      9,
+      5.9
+     ],
+     "thickness": 0.1
+    },
+    {
+     "id": "w14",
+     "a": [
+      3.9,
+      10.1
+     ],
+     "b": [
+      9,
+      10.1
+     ],
+     "thickness": 0.1
+    },
+    {
+     "id": "w15",
+     "a": [
+      6.9,
+      5.9
+     ],
+     "b": [
+      6.9,
+      10.1
+     ],
+     "thickness": 0.1
+    },
+    {
+     "id": "w16",
+     "a": [
+      8.1,
+      10.1
+     ],
+     "b": [
+      8.1,
+      12
+     ],
+     "thickness": 0.1
+    }
+   ],
+   "openings": [
+    {
+     "id": "o17",
+     "kind": "door",
+     "a": [
+      5.3,
+      0
+     ],
+     "b": [
+      6.2,
+      0
+     ],
+     "door": {
+      "hinge": [
+       6.2,
+       0
+      ],
+      "openTo": [
+       6.2,
+       0.9
+      ],
+      "entrance": true
+     }
+    },
+    {
+     "id": "o18",
+     "kind": "door",
+     "a": [
+      2.85,
+      4.65
+     ],
+     "b": [
+      3.7,
+      4.65
+     ],
+     "door": {
+      "hinge": [
+       3.7,
+       4.65
+      ],
+      "openTo": [
+       3.7,
+       3.8
+      ]
+     }
+    },
+    {
+     "id": "o19",
+     "kind": "door",
+     "a": [
+      2.7,
+      4.75
+     ],
+     "b": [
+      2.7,
+      5.45
+     ],
+     "door": {
+      "hinge": [
+       2.7,
+       4.75
+      ],
+      "openTo": [
+       2,
+       4.75
+      ]
+     }
+    },
+    {
+     "id": "o20",
+     "kind": "door",
+     "a": [
+      2.7,
+      7.35
+     ],
+     "b": [
+      2.7,
+      8.05
+     ],
+     "door": {
+      "hinge": [
+       2.7,
+       8.05
+      ],
+      "openTo": [
+       2,
+       8.05
+      ]
+     }
+    },
+    {
+     "id": "o21",
+     "kind": "door",
+     "a": [
+      2.85,
+      8.15
+     ],
+     "b": [
+      3.7,
+      8.15
+     ],
+     "door": {
+      "hinge": [
+       3.7,
+       8.15
+      ],
+      "openTo": [
+       3.7,
+       7.3
+      ]
+     }
+    },
+    {
+     "id": "o22",
+     "kind": "door",
+     "a": [
+      3.9,
+      5.98
+     ],
+     "b": [
+      3.9,
+      6.8
+     ],
+     "door": {
+      "hinge": [
+       3.9,
+       6.8
+      ],
+      "openTo": [
+       4.72,
+       6.8
+      ]
+     }
+    },
+    {
+     "id": "o23",
+     "kind": "passage",
+     "a": [
+      3.9,
+      4.75
+     ],
+     "b": [
+      3.9,
+      5.85
+     ],
+     "head": 2.05
+    },
+    {
+     "id": "o24",
+     "kind": "door",
+     "a": [
+      7,
+      5.9
+     ],
+     "b": [
+      7.75,
+      5.9
+     ],
+     "door": {
+      "hinge": [
+       7,
+       5.9
+      ],
+      "openTo": [
+       7,
+       6.65
+      ]
+     }
+    },
+    {
+     "id": "o25",
+     "kind": "door",
+     "a": [
+      7,
+      10.1
+     ],
+     "b": [
+      7.85,
+      10.1
+     ],
+     "door": {
+      "hinge": [
+       7.85,
+       10.1
+      ],
+      "openTo": [
+       7.85,
+       10.95
+      ]
+     }
+    },
+    {
+     "id": "o26",
+     "kind": "door",
+     "a": [
+      8.1,
+      10.95
+     ],
+     "b": [
+      8.1,
+      11.75
+     ],
+     "door": {
+      "hinge": [
+       8.1,
+       10.95
+      ],
+      "openTo": [
+       8.9,
+       10.95
+      ]
+     }
+    },
+    {
+     "id": "o27",
+     "kind": "window",
+     "a": [
+      1.2,
+      12
+     ],
+     "b": [
+      2.7,
+      12
+     ]
+    },
+    {
+     "id": "o28",
+     "kind": "balcony",
+     "a": [
+      3.9,
+      10.3
+     ],
+     "b": [
+      3.9,
+      11.8
+     ],
+     "head": 2.15
+    },
+    {
+     "id": "o29",
+     "kind": "window",
+     "a": [
+      0,
+      7.2
+     ],
+     "b": [
+      0,
+      7.9
+     ],
+     "sill": 1.3,
+     "head": 2
+    },
+    {
+     "id": "o30",
+     "kind": "window",
+     "a": [
+      0,
+      4.9
+     ],
+     "b": [
+      0,
+      5.6
+     ],
+     "sill": 1.3,
+     "head": 2
+    },
+    {
+     "id": "o31",
+     "kind": "window",
+     "a": [
+      1.1,
+      0.9
+     ],
+     "b": [
+      2.5,
+      0.9
+     ]
+    },
+    {
+     "id": "o32",
+     "kind": "window",
+     "a": [
+      3.1,
+      0
+     ],
+     "b": [
+      5.3,
+      0
+     ]
+    },
+    {
+     "id": "o33",
+     "kind": "window",
+     "a": [
+      9,
+      4
+     ],
+     "b": [
+      9,
+      5.5
+     ]
+    },
+    {
+     "id": "o34",
+     "kind": "window",
+     "a": [
+      9,
+      7.7
+     ],
+     "b": [
+      9,
+      8.7
+     ]
+    },
+    {
+     "id": "o35",
+     "kind": "window",
+     "a": [
+      5,
+      10.1
+     ],
+     "b": [
+      6,
+      10.1
+     ]
+    }
+   ],
+   "furniture": [
+    {
+     "id": "f36",
+     "type": "bed",
+     "label": "Cama",
+     "x": 0.1,
+     "y": 9.3,
+     "w": 1.95,
+     "d": 1.7
+    },
+    {
+     "id": "f37",
+     "type": "wardrobe",
+     "label": "Armario",
+     "x": 0.1,
+     "y": 8.2,
+     "w": 2.55,
+     "d": 0.62,
+     "h": 2.2
+    },
+    {
+     "id": "f38",
+     "type": "chair",
+     "label": "Silla",
+     "x": 2.85,
+     "y": 10.99,
+     "w": 0.5,
+     "d": 0.42,
+     "h": 0.95,
+     "model": "demo/muebles/painted_wooden_chair_01/painted_wooden_chair_01_1k.gltf",
+     "heading": 270
+    },
+    {
+     "id": "f39",
+     "type": "bathtub",
+     "label": "Bañera",
+     "x": 0.1,
+     "y": 6.55,
+     "w": 0.75,
+     "d": 1.45
+    },
+    {
+     "id": "f40",
+     "type": "wc",
+     "label": "Inodoro",
+     "x": 1.2,
+     "y": 6.52,
+     "w": 0.42,
+     "d": 0.6
+    },
+    {
+     "id": "f41",
+     "type": "sink",
+     "label": "Lavabo",
+     "x": 1.75,
+     "y": 6.52,
+     "w": 0.7,
+     "d": 0.46,
+     "heading": 0
+    },
+    {
+     "id": "f42",
+     "type": "bathtub",
+     "label": "Bañera",
+     "x": 0.1,
+     "y": 4.85,
+     "w": 0.75,
+     "d": 1.45
+    },
+    {
+     "id": "f43",
+     "type": "wc",
+     "label": "Inodoro",
+     "x": 1.2,
+     "y": 5.78,
+     "w": 0.42,
+     "d": 0.6
+    },
+    {
+     "id": "f44",
+     "type": "sink",
+     "label": "Lavabo",
+     "x": 1.75,
+     "y": 5.92,
+     "w": 0.7,
+     "d": 0.46,
+     "heading": 180
+    },
+    {
+     "id": "f45",
+     "type": "wardrobe",
+     "label": "Armario",
+     "x": 0.1,
+     "y": 3.97,
+     "w": 2.6,
+     "d": 0.6,
+     "h": 2.2
+    },
+    {
+     "id": "f46",
+     "type": "bed",
+     "label": "Cama",
+     "x": 0.1,
+     "y": 2.25,
+     "w": 1.95,
+     "d": 1.2
+    },
+    {
+     "id": "f47",
+     "type": "desk",
+     "label": "Escritorio",
+     "x": 0.1,
+     "y": 1.02,
+     "w": 0.65,
+     "d": 1.1,
+     "model": "demo/muebles/metal_office_desk/metal_office_desk_1k.gltf",
+     "heading": 90,
+     "h": 0.75
+    },
+    {
+     "id": "f48",
+     "type": "chair",
+     "label": "Silla",
+     "x": 0.8,
+     "y": 1.36,
+     "w": 0.5,
+     "d": 0.42,
+     "h": 0.95,
+     "model": "demo/muebles/painted_wooden_chair_01/painted_wooden_chair_01_1k.gltf",
+     "heading": 270
+    },
+    {
+     "id": "f49",
+     "type": "bed",
+     "label": "Cama",
+     "x": 4.95,
+     "y": 7.95,
+     "w": 1.9,
+     "d": 1.4,
+     "heading": 270
+    },
+    {
+     "id": "f50",
+     "type": "nightstand",
+     "label": "Mesilla",
+     "x": 6.43,
+     "y": 9.37,
+     "w": 0.42,
+     "d": 0.45,
+     "heading": 270
+    },
+    {
+     "id": "f51",
+     "type": "nightstand",
+     "label": "Mesilla",
+     "x": 6.43,
+     "y": 7.48,
+     "w": 0.42,
+     "d": 0.45,
+     "heading": 270
+    },
+    {
+     "id": "f52",
+     "type": "wardrobe",
+     "label": "Armario",
+     "x": 4.8,
+     "y": 5.96,
+     "w": 2.05,
+     "d": 0.6,
+     "h": 2.2,
+     "heading": 0
+    },
+    {
+     "id": "f53",
+     "type": "kitchen",
+     "label": "Cocina",
+     "x": 8.4,
+     "y": 6.65,
+     "w": 0.6,
+     "d": 3.4
+    },
+    {
+     "id": "f54",
+     "type": "fridge",
+     "label": "Nevera",
+     "x": 8.35,
+     "y": 5.97,
+     "w": 0.65,
+     "d": 0.65,
+     "heading": 270
+    },
+    {
+     "id": "f55",
+     "type": "other",
+     "label": "Lavadora",
+     "x": 8.32,
+     "y": 10.17,
+     "w": 0.62,
+     "d": 0.6,
+     "h": 0.86
+    },
+    {
+     "id": "f56",
+     "type": "cabinet",
+     "label": "Pila",
+     "x": 8.5,
+     "y": 11.35,
+     "w": 0.45,
+     "d": 0.6,
+     "h": 0.85,
+     "heading": 270
+    },
+    {
+     "id": "f57",
+     "type": "table",
+     "label": "Mesa",
+     "x": 4.55,
+     "y": 3.05,
+     "w": 0.95,
+     "d": 1.35,
+     "model": "demo/muebles/wooden_table_02/wooden_table_02_1k.gltf",
+     "heading": 90,
+     "h": 0.75
+    },
+    {
+     "id": "f58",
+     "type": "chair",
+     "label": "Silla",
+     "x": 4,
+     "y": 3.19,
+     "w": 0.5,
+     "d": 0.42,
+     "h": 0.95,
+     "model": "demo/muebles/painted_wooden_chair_01/painted_wooden_chair_01_1k.gltf",
+     "heading": 90
+    },
+    {
+     "id": "f59",
+     "type": "chair",
+     "label": "Silla",
+     "x": 4,
+     "y": 3.84,
+     "w": 0.5,
+     "d": 0.42,
+     "h": 0.95,
+     "model": "demo/muebles/painted_wooden_chair_01/painted_wooden_chair_01_1k.gltf",
+     "heading": 90
+    },
+    {
+     "id": "f60",
+     "type": "chair",
+     "label": "Silla",
+     "x": 5.55,
+     "y": 3.19,
+     "w": 0.5,
+     "d": 0.42,
+     "h": 0.95,
+     "model": "demo/muebles/painted_wooden_chair_01/painted_wooden_chair_01_1k.gltf",
+     "heading": 270
+    },
+    {
+     "id": "f61",
+     "type": "chair",
+     "label": "Silla",
+     "x": 5.55,
+     "y": 3.84,
+     "w": 0.5,
+     "d": 0.42,
+     "h": 0.95,
+     "model": "demo/muebles/painted_wooden_chair_01/painted_wooden_chair_01_1k.gltf",
+     "heading": 270
+    },
+    {
+     "id": "f62",
+     "type": "sofa",
+     "label": "Sofá",
+     "x": 8.05,
+     "y": 0.85,
+     "w": 0.85,
+     "d": 1.95
+    },
+    {
+     "id": "f63",
+     "type": "sofa",
+     "label": "Butaca",
+     "x": 6.5,
+     "y": 1.8,
+     "w": 0.8,
+     "d": 0.8
+    },
+    {
+     "id": "f64",
+     "type": "tv",
+     "label": "Tv",
+     "x": 6.4,
+     "y": 0.08,
+     "w": 2.45,
+     "d": 0.5
+    },
+    {
+     "id": "f65",
+     "type": "sideboard",
+     "label": "Aparador",
+     "x": 8.42,
+     "y": 3.85,
+     "w": 0.5,
+     "d": 1.9,
+     "model": "demo/muebles/modern_wooden_cabinet/modern_wooden_cabinet_1k.gltf",
+     "heading": 270,
+     "h": 0.7
+    }
+   ],
+   "entrance": {
+    "x": 5.75,
+    "y": 0.6,
+    "heading": 0
+   }
+  }
+ ],
+ "photos": []
+}
