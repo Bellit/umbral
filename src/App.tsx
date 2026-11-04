@@ -1,7 +1,8 @@
-import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import { Suspense, lazy, useEffect, useMemo, useState, type CSSProperties } from "react";
 import type { UmbralModel } from "./model/types";
 import { floorAreas, fmt } from "./model/geometry";
 import { CATALOG } from "./demo/catalog";
+import { isEditor, resolveAsset } from "./env";
 import { Viewer3D } from "./viewer/Viewer3D";
 import { Plan2D } from "./plan/Plan2D";
 import { Photos } from "./ui/Photos";
@@ -18,35 +19,34 @@ const TABS: { id: Tab; label: string }[] = [
   { id: "inmobiliaria", label: "Inmobiliaria" },
 ];
 
-declare global { interface Window { __UMBRAL_ASSETS__?: Record<string, string>; __UMBRAL_EDITOR__?: boolean } }
+// el editor se descarga solo si se abre: el comprador no carga ese código
+const Editor = lazy(() => import("./editor/Editor").then(m => ({ default: m.Editor })));
+const EditorHome = lazy(() => import("./editor/Editor").then(m => ({ default: m.EditorHome })));
 
-/** Rutas de fotos y modelos: en la demo publicada vienen incrustadas; en local, de /public. */
-function resolveAsset(src: string): string {
-  return window.__UMBRAL_ASSETS__?.[src] ?? `${import.meta.env.BASE_URL}${src}`;
-}
-
-function isEditor(): boolean {
-  try {
-    return Boolean(window.__UMBRAL_EDITOR__) || import.meta.env.DEV || new URLSearchParams(location.search).has("editar");
-  } catch { return false; }
-}
-
-/** Id del inmueble en la dirección (#/inmueble/<id>); las rutas con # funcionan en alojamiento estático. */
-function propertyFromHash(): string | null {
-  return /^#\/inmueble\/([\w-]+)$/.exec(location.hash)?.[1] ?? null;
+/** Rutas con # porque funcionan en cualquier alojamiento estático. */
+function routeFromHash() {
+  const property = /^#\/inmueble\/([\w-]+)$/.exec(location.hash)?.[1];
+  if (property) return { page: "property" as const, id: property };
+  const draft = /^#\/editor\/([\w-]+)$/.exec(location.hash)?.[1];
+  if (isEditor() && draft) return { page: "editor" as const, id: draft };
+  if (isEditor() && location.hash === "#/editor") return { page: "editor-home" as const, id: "" };
+  return { page: "home" as const, id: "" };
 }
 
 export function App() {
-  const [propertyId, setPropertyId] = useState(propertyFromHash);
+  const [route, setRoute] = useState(routeFromHash);
 
   useEffect(() => {
-    const onHash = () => setPropertyId(propertyFromHash());
+    const onHash = () => setRoute(routeFromHash());
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
-  const entry = CATALOG.find(e => e.id === propertyId);
-  return entry ? <PropertySheet key={entry.id} initial={entry.model} /> : <Home entries={CATALOG} />;
+  if (route.page === "editor" || route.page === "editor-home") {
+    return <Suspense fallback={<p className="ed-loading">Abriendo el editor…</p>}>{route.page === "editor" ? <Editor key={route.id} draftId={route.id} /> : <EditorHome />}</Suspense>;
+  }
+  const entry = route.page === "property" ? CATALOG.find(e => e.id === route.id) : undefined;
+  return entry ? <PropertySheet key={entry.id} initial={entry.model} /> : <Home entries={CATALOG} editor={isEditor()} />;
 }
 
 /** Ficha de un inmueble: cuatro pestañas y el pie "Powered by Umbral". */

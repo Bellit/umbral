@@ -11,6 +11,23 @@ La portada lista los inmuebles de la inmobiliaria (ficticia) y cada uno abre su 
 `#/inmueble/<id>`: dos casas transcritas a mano de planos de prueba. Para añadir uno, deja
 su `.json` en `src/demo/` y regístralo en `src/demo/catalog.ts`.
 
+## Editor
+
+En `#/editor` se prepara una vivienda a partir de su plano. Solo aparece con `npm run dev` o
+añadiendo `?editar` a la dirección de una copia publicada, y el comprador no descarga su código.
+
+1. Carga una imagen del plano (JPG o PNG) y fija la escala marcando una medida conocida.
+2. Calca las paredes; las estancias se crean con un clic dentro de cada zona cerrada y sus m²
+   se actualizan al mover paredes.
+3. Añade puertas, ventanas y muebles, marca la puerta de entrada y el inicio del recorrido, y
+   revisa el resultado con «Ver en 3D».
+4. «Guardar archivo» descarga el `.umbral.json`. Para publicarlo, déjalo en `src/demo/` y
+   regístralo en `src/demo/catalog.ts`.
+
+Los borradores se guardan solos en el navegador y el plano de fondo no sale del ordenador ni se
+incluye en el archivo; al volver a cargar la misma imagen se recupera su escala. Una planta por
+modelo: si el archivo trae más, se edita la primera y las demás se conservan.
+
 ### Inmuebles privados
 
 Los archivos `src/privado/*.json` aparecen en la portada solo con `npm run dev`, y sus fotos
@@ -56,6 +73,7 @@ para verlos en una copia publicada, añade `?editar` a la dirección.
 | `src/io/` | Lectores de planos: archivo de Claude (activo) y API de Anthropic (preparado) |
 | `src/viewer/` | Visor 3D: maqueta, recorrido en primera persona, muebles y texturas |
 | `src/plan/` | Plano 2D en SVG con superficies |
+| `src/editor/` | Editor: lienzo, paneles, borradores y operaciones sobre la planta |
 | `src/ui/` | Portada, fotos, ficha de la inmobiliaria y ajustes |
 | `src/demo/` | Inmuebles de demostración y su catálogo |
 | `public/demo/muebles/` | Modelos 3D de la demostración, de [Poly Haven](https://polyhaven.com) (licencia CC0) |
@@ -78,5 +96,5 @@ npm run typecheck
 - Buscar modelos reales para lo que Poly Haven no cubre (sofá en L, camas, armarios,
   cocina, nevera, televisor y baños); ahora son piezas detalladas hechas por código, en
   `src/viewer/furniture.ts`.
-- Editor: calcar un plano sobre una imagen y fijar la escala con una medida.
+- Editor: admitir planos en PDF y piezas en L dibujadas a mano.
 - Skill de Umbral para Claude de escritorio (lectura de planos, fotos y vídeo).
